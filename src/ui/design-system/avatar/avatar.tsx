@@ -1,27 +1,30 @@
+import clsx from "clsx";
 import Image from "next/image";
 interface Props{
-    size?: "small" | "medium" | "large"
+    size?: "small" | "medium" | "large",
+    src: string;
+    alt: string;
 }
 
-export const Avatar =({size="medium"}:Props)=>{
+export const Avatar =({size="medium",src,alt}:Props)=>{
     let sizeStyles: string;
 
     switch(size)
     {
         case "small":
-            sizeStyles="";
+            sizeStyles="w-[24px] h-[24px]";
             break;
         case "medium":
-            sizeStyles="";
+            sizeStyles="w-[34px] h-[34px]";
             break;
         case "large":
-            sizeStyles="";
+            sizeStyles="w-[50px] h-[50px]";
             break;
     }
 
  return(
-    <div>
-    <Image src="/images/img.png" alt="photo licoln" width={50} height={50} className="rounded-full"/>
+    <div className={clsx(sizeStyles,"bg-gray-400 rounded-full relative")}>
+    <Image src={src} alt={alt} fill className="rounded-full object-cover object-center" />
     </div>
  )
 

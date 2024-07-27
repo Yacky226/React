@@ -78,7 +78,7 @@ export const Button = ({
      return(
     <>
     <button type="button" 
-            className={clsx(variantStyles,sizeStyle,isLoading && "cursor-wait","relative")}
+            className={clsx(variantStyles,sizeStyle,isLoading && "cursor-wait","relative animate")}
             onClick={()=>console.log('click')}
             disabled={disabled}>
         {isLoading && (

@@ -1,5 +1,5 @@
 import { Container } from "@/ui/components/container/container";
-import { Navigation } from "@/ui/components/navigation/navigation";
+import { Layout } from "@/ui/components/layout/layout";
 import { Seo } from "@/ui/components/seo/seo";
 import { Avatar } from "@/ui/design-system/avatar/avatar";
 import { Button } from "@/ui/design-system/button/button";
@@ -13,10 +13,8 @@ export default function DesignSystem(){
     return(
         <>
         <Seo title="Design System" description="Description"/>
-    
-        <Navigation/>
-        
-      <Container className="space-y-20 py-10">
+        <Layout>
+           <Container className="space-y-20 py-10">
         {/*TYpography*/}
         <div className="space-y-2">
         <p>Display</p>
@@ -143,27 +141,10 @@ export default function DesignSystem(){
         <Button size="large" iconTheme="secondary" variant="ico"  icon={{icon:RiUser6Fill}}/>
         </div>
     
-    </Container>
-         {/* <div className="space-y-5">
-        <Typography variant="display" component="div" themes="primary">
-          Coders
-        </Typography>
-        <Typography variant="h1" component="div" themes="secondary">
-          Coders Monkey
-        </Typography>
-        <Typography variant="Lead" component="div">
-          Coders
-        </Typography>
-        <Typography variant="body-sm" component="div">
-          Coders
-        </Typography>
-        <Typography variant="caption4" component="div">
-          Coders
-        </Typography>
-        <Typography variant="caption4" weight="medium" component="div">
-          Coders
-        </Typography>
-        </div> */}
+          </Container>
+        </Layout>
+    
+        
       </>
     );
 }
